@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "pm2 start eco.config.js",
+    "stop": "pm2 delete eco.config.js",
+    "log": "pm2 flush",
+    "list": "pm2 list",
+    "docs:dev": "cross-env NODE_ENV=development vitepress dev doc",
+    "docs:build": "vitepress build doc",
+    "docs:preview": "vitepress preview doc",
+    "docs:sidebar": "tsx doc/.vitepress/utils/generateSidebar.ts --watch"
+  },
+  "devDependencies": {
+    "@types/chokidar": "^2.1.7",
+    "@types/node": "^22.14.1",
+    "chokidar": "^4.0.3",
+    "cross-env": "^7.0.3",
+    "fast-glob": "^3.3.3",
+    "pm2": "^6.0.5",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "vitepress": "^1.6.3"
+  }
+}
